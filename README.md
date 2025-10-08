@@ -1,16 +1,23 @@
 # 🛞 Tire Classification using Transfer Learning (ResNet50)
 
 ## 📖 Overview
-This project predicts **tire classes** (e.g., damaged vs. normal) using **Transfer Learning** with a pretrained **ResNet50** architecture from **PyTorch**.  
-It demonstrates a modern deep learning pipeline including:
+This project predicts **tire classes** (e.g., damaged vs. normal) using **Transfer Learning** with a pretrained **ResNet50** architecture from **PyTorch**. It demonstrates a modern deep learning pipeline including:
 
 - 🧠 **Pretrained ResNet50** backbone from ImageNet for feature extraction  
 - 🧩 **Custom Fully Connected (FC) Classifier Head** with **Batch Normalization**, **ReLU**, and **Dropout**  
 - ⚖️ **Cross-Entropy Loss** for binary classification  
 - 🚀 **Adam optimizer** for efficient training  
 - 🔒 **Frozen ResNet backbone** to leverage pre-learned visual features  
-- 🧰 **Modular design** — easily switch between saving only the FC head or the full model  
-- 📊 **Configurable hyperparameters** via `config.py`
+- 🧰 **Modular design** — easily switch between saving only the FC head or the full model
+- 🎨 **Interactive Gradio Interface** for real-time image classification visualization
+
+---
+
+## 🖼️ Application Screenshot
+
+Below is a preview of the **Gradio Interface** used for real-time tire classification:
+
+![Application Screenshot](assets/app_screenshot.png)
 
 ---
 
@@ -20,6 +27,7 @@ It demonstrates a modern deep learning pipeline including:
 - **pandas**, **numpy** – data handling
 - **matplotlib** – loss visualization  
 - **pickle** – saving/loading normalization params and trained model
+- **Gradio** — interactive web interface for real-time model demos 
 
 ---
 
@@ -74,9 +82,12 @@ cd src
 ## 📂 Project Structure
 
 ```bash
+assets/
+└── app_screenshot.png                # Screenshot of the application
+
 data/
-└── defective                         # defective tire images
-└── good                              # good tire images
+└── defective                         # Defective tire images
+└── good                              # Good tire images
 
 model/
 └── tire_classifier.pth               # Trained model (Custom FC layer weights)
