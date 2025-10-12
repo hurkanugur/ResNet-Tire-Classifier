@@ -1,8 +1,8 @@
 # -------------------------
 # Paths
 # -------------------------
-MODEL_PATH = "../model/tire_classifier.pth"
-DATASET_PATH = "../data"
+MODEL_PATH = "model/tire_classifier.pth"
+DATASET_PATH = "data/"
 
 # -------------------------
 # Training hyperparameters

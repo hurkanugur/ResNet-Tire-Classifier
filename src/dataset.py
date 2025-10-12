@@ -3,7 +3,7 @@ import torch.nn as nn
 from torch.utils.data import DataLoader, random_split
 import torchvision
 from torchvision import transforms
-import config
+from src import config
 
 class TireDataset:
     def __init__(self):

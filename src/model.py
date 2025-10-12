@@ -1,7 +1,7 @@
 import torch
 from torch import nn
 import torchvision.models as models
-import config
+from src import config
 
 class TireClassificationModel(nn.Module):
     def __init__(self, device):
